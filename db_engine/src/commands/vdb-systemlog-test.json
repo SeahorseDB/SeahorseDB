@@ -1,0 +1,19 @@
+{
+  "TEST": {
+    "summary": "Test system log.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": 2,
+    "container": "SYSTEMLOG",
+    "function": "LogTestCommand",
+    "command_flags": [
+      "FAST",
+      "READONLY"
+    ],
+    "reply_schema": {
+      "type": "string",
+      "description": "logged messages"
+    }
+  }
+}

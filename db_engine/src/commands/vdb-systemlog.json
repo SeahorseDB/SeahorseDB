@@ -1,0 +1,9 @@
+{
+  "SYSTEMLOG": {
+    "summary": "VDB systemlog-related commands.",
+    "complexity": "Depends on subcommand.",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -2
+  }
+}

@@ -1,0 +1,69 @@
+# Temporary editor files
+.*.swp
+.*.swo
+.*.swn
+*.pyc
+*.pymon
+*.orig
+*.rej
+.ccls
+.ccls-cache/*
+*.dSYM
+.DS_Store
+.vscode/*
+.idea/*
+compile_commands.json
+
+# Build artifacts and object files
+*.o
+*.xo
+*.so
+*.d
+build/
+cmake-build-debug/
+
+# Log files
+*.log
+*.patch
+*.diff
+
+# Redis-specific files and binaries
+dump.rdb
+dump.vdb
+appendonly.aof*
+appendonlydir
+redis-benchmark
+redis-check-aof
+redis-check-rdb
+redis-check-dump
+redis-cli
+redis-sentinel
+redis-server
+redis.ds
+/src/redis.conf
+/src/nodes.conf
+/src/transfer.sh
+
+# Redis build-related files
+doc-tools
+release
+SHORT_TERM_TODO
+release.h
+.make-*
+.prerequisites
+
+# Testing and TLS-related files
+tests/tls/*
+tests/pytest_scripts/embedding_store/*
+tests/pytest_scripts/save-test/*
+tests/pytest_scripts/unload-test/*
+tests/pytest_scripts/unloaded_data/*
+__vdb_test_root__/
+tests/pytest_scripts/record_store/*
+
+
+# Miscellaneous
+misc/*
+.cache/
+Makefile.dep
+redis.code-workspace

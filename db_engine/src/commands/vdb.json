@@ -1,0 +1,9 @@
+{
+  "VDB": {
+    "summary": "A container for VDB commands.",
+    "complexity": "Depends on subcommand.",
+    "group": "vdb",
+    "since": "3.0.0",
+    "arity": -2
+  }
+}

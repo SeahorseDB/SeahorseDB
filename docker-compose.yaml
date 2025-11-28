@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  seahorse-1:
+    image: seahorse:opensource
+    container_name: seahorse
+    ports:
+      - "5555:5555"
+    volumes:
+      - ./seahorse.conf:/data/seahorse.conf
+      - ./data:/data
+    privileged: true
+    command: /data/seahorse.conf
+

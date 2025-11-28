@@ -1,0 +1,33 @@
+{
+    "DELETE": {
+        "summary": "Delete Data from [Table Name] with [Filter].",
+        "complexity": "O(n)",
+        "group": "vdb",
+        "since": "7.2.4",
+        "arity": -4,
+        "container": "TABLE",
+        "function": "DeleteCommand",
+        "command_flags": [
+          "WRITE"
+        ],
+        "command_tips": [
+          "NONDETERMINISTIC_OUTPUT"
+        ],
+        "arguments": [
+          {
+            "name": "[Table Name]",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "name": "[Filter]",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "reply_schema": {
+          "description": "number of deleted rows.",
+          "type": "unsigned integer"
+        }
+    }
+}

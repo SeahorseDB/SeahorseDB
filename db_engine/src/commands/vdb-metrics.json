@@ -1,0 +1,9 @@
+{
+  "METRICS": {
+    "summary": "VDB metrics-related commands.",
+    "complexity": "Depends on subcommand.",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -2
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "DROP": {
+    "summary": "DROP VDB Table.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -3,
+    "container": "TABLE",
+    "function": "DropTableCommand",
+    "command_flags": [
+      "WRITE"
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Table Name]",
+        "type": "string",
+        "optional": false
+      }
+    ],
+    "reply_schema": {
+      "description": "status of the command execution.",
+      "type": "string"
+    }
+  }
+}

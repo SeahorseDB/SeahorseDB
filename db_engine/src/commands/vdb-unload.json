@@ -1,0 +1,28 @@
+{
+    "VDB-UNLOAD": {
+        "summary": "Unload [Table Name] to disk at [Path], and remove from memory.",
+        "complexity": "O(1)",
+        "group": "vdb",
+        "since": "7.2.4",
+        "arity": -2,
+        "function": "UnloadCommand",
+        "command_flags": ["WRITE"],
+        "command_tips": ["NONDETERMINISTIC_OUTPUT"],
+        "arguments": [
+            {
+              "name": "[Table Name]",
+              "type": "string",
+              "optional": false
+            },
+            {
+              "name": "[Path]",
+              "type": "string",
+              "optional": true
+            }
+          ],
+        "reply_schema": {
+            "description": "status of the command execution",
+            "type": "bool"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "CREATE": {
+    "summary": "Create VDB Table with [Table Schema].",
+    "complexity": "O(N) where N is the total number of Cluster nodes",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -3,
+    "container": "TABLE",
+    "function": "CreateTableCommand",
+    "command_flags": [
+      "WRITE",
+      "DENYOOM"
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Table Schema]",
+        "type": "string",
+        "optional": false
+      }
+    ],
+    "reply_schema": {
+      "description": "status of the command execution.",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "LIST": {
+    "summary": "Show list of VDB table names.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": 2,
+    "container": "TABLE",
+    "function": "ListTableCommand",
+    "command_flags": [
+      "FAST",
+      "READONLY"
+    ],
+    "reply_schema": {
+      "type": "array",
+      "items": {
+        "description": "table name",
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  }
+}

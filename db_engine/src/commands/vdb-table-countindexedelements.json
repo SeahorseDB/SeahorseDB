@@ -1,0 +1,53 @@
+{
+  "CountIndexedElements": {
+    "summary": "Check whether VDB table is indexing.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -3,
+    "container": "TABLE",
+    "function": "CountIndexedElementsCommand",
+    "command_flags": [
+      "FAST",
+      "READONLY"
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Table Name]",
+        "type": "string",
+        "optional": false
+      }
+    ],
+    "reply_schema": {
+      "description": "Counts of the total and indexed elements in [Table Name]",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "integer",
+            "description": "Total count of elements"
+          },
+          {
+            "type": "integer",
+            "description": "Number of indexed columns"
+          },
+          {
+            "type": "string",
+            "description": "Column name"
+          },
+          {
+            "type": "string",
+            "description": "Index type"
+          },
+          {
+            "type": "integer",
+            "description": "Indexed count for the column"
+          }
+        ]
+      }
+    }
+  }
+}

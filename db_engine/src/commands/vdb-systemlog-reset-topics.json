@@ -1,0 +1,28 @@
+{
+  "RESET-TOPICS": {
+    "summary": "Reset log topics.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -3,
+    "container": "SYSTEMLOG",
+    "function": "LogResetTopicsCommand",
+    "command_flags": [
+      "READONLY"
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Log Topics]",
+        "type": "string",
+        "optional": false
+      }
+    ],
+    "reply_schema": {
+      "type": "string",
+      "description": "status of resetting log topics"
+    }
+  }
+}

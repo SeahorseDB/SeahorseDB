@@ -1,0 +1,368 @@
+#if 0
+/* macro template 
+ * when define MetricMacro, metric_name should be used by #metric_name */
+#define MetricMacro(metric_name, count_label, count_desc, time_label, \
+                    time_desc, size_label, size_desc, for_debug)      \
+  ...
+#undef MetricMacro
+/* template */
+MetricMacro(MetricName
+  ,/* count_label */ ""
+  ,/* count_desc  */ ""
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+#endif
+
+MetricMacro(IndexAddPoint 
+  ,/* count_label */ "number of executions of AddPoint API"
+  ,/* count_desc  */ "count shows how many times AddPoint API is called."
+  ,/* time_label  */ "time to add single vector embedding into index"
+  ,/* time_desc   */ "time shows elapsed time to adding single vector embedding."
+  ,/* size_label  */ "number of embeddings which are added into index"
+  ,/* size_desc   */ "size shows how many embeddings are inserted into index."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(CollectCountOnly
+  ,/* count_label */ "number of blabla..."
+  ,/* count_desc  */ "count shows how many times blabla.."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ true
+)
+
+MetricMacro(CollectTimeOnly
+  ,/* count_label */ "number of blabla..."
+  ,/* count_desc  */ "count shows how many times blabla.."
+  ,/* time_label  */ "time blabla.."
+  ,/* time_desc   */ "time shows elapsed time blabla..."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(CollectSizeOnly
+  ,/* count_label */ "number of blabla..."
+  ,/* count_desc  */ "count shows how many times blabla.."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ "size blabla.."
+  ,/* size_desc   */ "size shows blabla.."
+  ,/* for_debug   */ true
+)
+
+MetricMacro(CreateTable
+  ,/* count_label */ "number of executions of CreateTable API"
+  ,/* count_desc  */ "count shows how many times CreateTable API is called."
+  ,/* time_label  */ "time to create table"
+  ,/* time_desc   */ "time shows elapsed time to creating table."
+  ,/* size_label  */ "number of failed to create table"
+  ,/* size_desc   */ "size shows how many tables are failed to create."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ListTable
+  ,/* count_label */ "number of executions of ListTable API"
+  ,/* count_desc  */ "count shows how many times ListTable API is called."
+  ,/* time_label  */ "time to list table"
+  ,/* time_desc   */ "time shows elapsed time to listing table."
+  ,/* size_label  */ "number of tables"
+  ,/* size_desc   */ "size shows how many tables are listed."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ReadIoLatency
+  ,/* count_label */ "number of executions of ReadFrom API"
+  ,/* count_desc  */ "count shows how many times ReadFrom API is called."
+  ,/* time_label  */ "latency of ReadFrom API"
+  ,/* time_desc   */ "time shows elapsed time to reading from disk."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ReadIoSize
+  ,/* count_label */ "number of executions of ReadFrom API"
+  ,/* count_desc  */ "count shows how many times ReadFrom API is called."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ "size of ReadFrom API"
+  ,/* size_desc   */ "size shows how many bytes are read from disk."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(RandomReadEmbeddingsLatency
+  ,/* count_label */ "number of executions of EmbeddingStore::ReadToBuffer API"
+  ,/* count_desc  */ "count shows how many times EmbeddingStore::ReadToBuffer API is called."
+  ,/* time_label  */ "latency of EmbeddingStore::ReadToBuffer API"
+  ,/* time_desc   */ "time shows elapsed time to reading random embedding from disk."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(RandomReadEmbeddingsSize
+  ,/* count_label */ "number of executions of EmbeddingStore::ReadToBuffer API"
+  ,/* count_desc  */ "count shows how many times EmbeddingStore::ReadToBuffer API is called."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ "number of embeddings read from disk"
+  ,/* size_desc   */ "size shows how many embeddings are read from disk."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ReadAndCalculateDistancesLatency
+  ,/* count_label */ "number of executions of EmbeddingStore::ReadAndCalculateDistances API"
+  ,/* count_desc  */ "count shows how many times EmbeddingStore::ReadAndCalculateDistances API is called."
+  ,/* time_label  */ "latency of EmbeddingStore::ReadAndCalculateDistances API"
+  ,/* time_desc   */ "time shows elapsed time to reading and calculating distances of embeddings from disk."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ReadAndCalculateDistancesSize
+  ,/* count_label */ "number of executions of EmbeddingStore::ReadAndCalculateDistances API"
+  ,/* count_desc  */ "count shows how many times EmbeddingStore::ReadAndCalculateDistances API is called."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ "number of distances calculated"
+  ,/* size_desc   */ "size shows how many distances are calculated."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(IndexHandlerSearchKnnLatency
+  ,/* count_label */ "number of executions of IndexHandler::SearchKnn API"
+  ,/* count_desc  */ "count shows how many times IndexHandler::SearchKnn API is called."
+  ,/* time_label  */ "latency of IndexHandler::SearchKnn API"
+  ,/* time_desc   */ "time shows elapsed time to searching k-nearest neighbors."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(IndexHandlerSearchKnnSize
+  ,/* count_label */ "number of executions of IndexHandler::SearchKnn API"
+  ,/* count_desc  */ "count shows how many times IndexHandler::SearchKnn API is called."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ "number of embeddings found"
+  ,/* size_desc   */ "size shows how many embeddings are found."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(VectorIndexSearchKnnLatency
+  ,/* count_label */ "number of executions of VectorIndex::SearchKnn API"
+  ,/* count_desc  */ "count shows how many times VectorIndex::SearchKnn API is called."
+  ,/* time_label  */ "latency of VectorIndex::SearchKnn API"
+  ,/* time_desc   */ "time shows elapsed time to searching k-nearest neighbors."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(VectorIndexSearchKnnSize
+  ,/* count_label */ "number of executions of VectorIndex::SearchKnn API"
+  ,/* count_desc  */ "count shows how many times VectorIndex::SearchKnn API is called."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ "number of embeddings found"
+  ,/* size_desc   */ "size shows how many embeddings are found."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(HnswSearchKnnLatency
+  ,/* count_label */ "number of executions of Hnsw::SearchKnn API"
+  ,/* count_desc  */ "count shows how many times Hnsw::SearchKnn API is called."
+  ,/* time_label  */ "latency of Hnsw::SearchKnn API"
+  ,/* time_desc   */ "time shows elapsed time to searching k-nearest neighbors."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(HnswSearchKnnSize
+  ,/* count_label */ "number of executions of Hnsw::SearchKnn API"
+  ,/* count_desc  */ "count shows how many times Hnsw::SearchKnn API is called."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ "number of embeddings found"
+  ,/* size_desc   */ "size shows how many embeddings are found."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(HnswSearchKnnHopCountPerQuery
+  ,/* count_label */ "number of hops of Hnsw::SearchKnn API"
+  ,/* count_desc  */ "count shows how many times hops are done in Hnsw::SearchKnn API."
+  ,/* time_label  */ "latency of Hnsw::SearchKnn API per hop"
+  ,/* time_desc   */ "time shows elapsed time to searching k-nearest neighbors per hop."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(HnswSearchKnnComputationCountPerQuery
+  ,/* count_label */ "number of computations of Hnsw::SearchKnn API"
+  ,/* count_desc  */ "count shows how many times computations are done in Hnsw::SearchKnn API."
+  ,/* time_label  */ "latency of Hnsw::SearchKnn API per computation"
+  ,/* time_desc   */ "time shows elapsed time to searching k-nearest neighbors per computation."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(HnswSearchKnnCandidateUpdateCountPerQuery
+  ,/* count_label */ "number of candidate updates of Hnsw::SearchKnn API"
+  ,/* count_desc  */ "count shows how many times candidate updates are done in Hnsw::SearchKnn API."
+  ,/* time_label  */ "latency of Hnsw::SearchKnn API per candidate update"
+  ,/* time_desc   */ "time shows elapsed time to searching k-nearest neighbors per candidate update."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(AnnCommandLatency
+  ,/* count_label */ "number of executions of ANN API"
+  ,/* count_desc  */ "count shows how many times ANN API is called."
+  ,/* time_label  */ "latency of ANN API"
+  ,/* time_desc   */ "time shows elapsed time to searching nearest neighbors."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(BatchAnnCommandLatency
+  ,/* count_label */ "number of executions of BATCHANN API"
+  ,/* count_desc  */ "count shows how many times BATCHANN API is called."
+  ,/* time_label  */ "latency of BATCHANN API"
+  ,/* time_desc   */ "time shows elapsed time to searching nearest neighbors."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(WriteIoLatency
+  ,/* count_label */ "number of executions of WriteTo API"
+  ,/* count_desc  */ "count shows how many times WriteTo API is called."
+  ,/* time_label  */ "latency of WriteTo API"
+  ,/* time_desc   */ "time shows elapsed time to writing to disk."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(WriteIoSize
+  ,/* count_label */ "number of executions of WriteTo API"
+  ,/* count_desc  */ "count shows how many times WriteTo API is called."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ "size of WriteTo API"
+  ,/* size_desc   */ "size shows how many bytes are written to disk."
+  ,/* for_debug   */ false
+)
+
+MetricMacro(BatchInsertRecordCount
+  ,/* count_label */ "number of records in BatchInsert API"
+  ,/* count_desc  */ "count shows how many records are inserted in BatchInsert API."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(BatchInsertRecordSkippedCount
+  ,/* count_label */ "number of records skipped by unique violation"
+  ,/* count_desc  */ "count shows how many records are skipped by unique violation."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ThreadPoolTaskWakeupLatency
+  ,/* count_label */ "number of thread pool task allocations"
+  ,/* count_desc  */ "count shows how many times tasks are allocated to the thread pool."
+  ,/* time_label  */ "latency between task allocation and thread wakeup"
+  ,/* time_desc   */ "time shows elapsed time from when main thread allocates a task to thread pool until the thread wakes up."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ThreadPoolResponseDeliveryLatency
+  ,/* count_label */ "number of thread pool responses completed"
+  ,/* count_desc  */ "count shows how many times thread pool tasks completed forming responses."
+  ,/* time_label  */ "latency between response formation and delivery"
+  ,/* time_desc   */ "time shows elapsed time from when a thread pool thread completes a task response until it's actually delivered."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ThreadPoolAddTaskInterval
+  ,/* count_label */ "number of thread pool add task interval"
+  ,/* count_desc  */ "count shows how many times thread pool add task interval."
+  ,/* time_label  */ "add task interval in thread pool"
+  ,/* time_desc   */ "time shows elapsed time from when main thread allocates a task to thread pool until the thread wakes up."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ThreadPoolAddTaskIntervalInBusy
+  ,/* count_label */ "number of thread pool add task interval in busy"
+  ,/* count_desc  */ "count shows how many times thread pool add task interval in busy."
+  ,/* time_label  */ "add task interval in thread pool in busy"
+  ,/* time_desc   */ "time shows elapsed time from when main thread allocates a task to thread pool until the thread wakes up in busy."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ThreadPoolActiveThreadCountAtTaskEnd
+  ,/* count_label */ "number of active threads at task end"
+  ,/* count_desc  */ "count shows how many active threads are at task end."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(ThreadPoolActiveThreadCountAtTaskEndExceptOne
+  ,/* count_label */ "number of active threads at task end except one"
+  ,/* count_desc  */ "count shows how many active threads are at task end except one."
+  ,/* time_label  */ ""
+  ,/* time_desc   */ ""
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(BatchInsertCommandLatency
+  ,/* count_label */ "number of executions of BatchInsertCommand API"
+  ,/* count_desc  */ "count shows how many times BatchInsertCommand API is called."
+  ,/* time_label  */ "latency of BatchInsertCommand API"
+  ,/* time_desc   */ "time shows elapsed time to executing BatchInsertCommand."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)
+
+MetricMacro(MakeActiveSetLatency
+  ,/* count_label */ "number of executions of BuildColumns"
+  ,/* count_desc  */ "count shows how many times BuildColumns is called."
+  ,/* time_label  */ "latency of BuildColumns"
+  ,/* time_desc   */ "time shows elapsed time to making active set."
+  ,/* size_label  */ ""
+  ,/* size_desc   */ ""
+  ,/* for_debug   */ false
+)

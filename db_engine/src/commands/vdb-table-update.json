@@ -1,0 +1,39 @@
+{
+    "UPDATE": {
+        "summary": "Update Data to [Update] from [Table Name] with [Filter].",
+        "complexity": "O(n)",
+        "group": "vdb",
+        "since": "7.2.4",
+        "arity": -5,
+        "container": "TABLE",
+        "function": "UpdateCommand",
+        "command_flags": [
+          "WRITE",
+          "DENYOOM"
+        ],
+        "command_tips": [
+          "NONDETERMINISTIC_OUTPUT"
+        ],
+        "arguments": [
+          {
+            "name": "[Table Name]",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "name": "[Update]",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "name": "[Filter]",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "reply_schema": {
+          "description": "number of updated rows.",
+          "type": "unsigned integer"
+        }
+    }
+}

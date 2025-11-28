@@ -1,0 +1,62 @@
+{
+  "SCANOPEN_INTERNAL": {
+    "summary": "Cursor open for scanning data from [Table Name] with [Projection list] and [Filter], including internal columns.",
+    "complexity": "O(n)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -6,
+    "container": "TABLE",
+    "function": "ScanOpenCommand",
+    "command_flags": [
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[UUID]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[Table Name]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[Projection List]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[Filter]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[Limit]",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "reply_schema": {
+      "description": "Array containing scan results and next batch indicator",
+      "type": "array",
+      "items": [
+        {
+          "description": "Array of bulk strings containing scan results",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "description": "Boolean indicating whether more results are available",
+          "type": "boolean"
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "CHECKINDEXING": {
+    "summary": "Check whether VDB table is indexing.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -3,
+    "container": "TABLE",
+    "function": "CheckIndexingCommand",
+    "command_flags": [
+      "FAST",
+      "READONLY"
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Table Name]",
+        "type": "string",
+        "optional": false
+      }
+    ],
+    "reply_schema": {
+      "description": "status of the indexing porcess.",
+      "type": "bool"
+    }
+  }
+}

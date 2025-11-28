@@ -1,0 +1,87 @@
+{
+  "ANN": {
+    "summary": "Search approximately [K] nearest neighbors from vector index of [Column Name] in [Table Name] with [Query Vector], [Projection] and [Filter]. (for debug)",
+    "complexity": "O(log N)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -9,
+    "container": "TABLE",
+    "function": "VectorSearchCommand",
+    "command_flags": [
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Table Name]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[Column Name]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[K]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[Query Vector]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[ef]",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "[Projection]",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "[Filter]",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "[N]",
+        "type": "string",
+        "optional": true,
+        "description": "total number of documents in the collection, required for BM25 calculation"
+      },
+      {
+        "name": "[avgdl]",
+        "type": "string",
+        "optional": true,
+        "description": "average document length, required for BM25 calculation"
+      },
+      {
+        "name": "[df]",
+        "type": "string",
+        "optional": true,
+        "description": "Arrow IPC serialized df data for BM25 calculation"
+      },
+      {
+        "name": "[BM25K]",
+        "type": "string",
+        "optional": true,
+        "description": "k parameter, used for BM25 calculation"
+      },
+      {
+        "name": "[BM25B]",
+        "type": "string",
+        "optional": true,
+        "description": "b parameter, used for BM25 calculation"
+      }
+    ],
+    "reply_schema": {
+      "description": "bulk string of scan results. (columns and distance)",
+      "type": "string"
+    }
+  }
+}

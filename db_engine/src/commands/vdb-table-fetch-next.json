@@ -1,0 +1,42 @@
+{
+  "FETCHNEXT": {
+    "summary": "Fetch next batch for scanning data from given cursor UUID.",
+    "complexity": "O(n)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -3,
+    "container": "TABLE",
+    "function": "FetchNextCommand",
+    "command_flags": [
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Cursor UUID]",
+        "type": "string",
+        "optional": false
+      }
+    ],
+    "reply_schema": {
+      "description": "Array containing scan results and next batch indicator",
+      "type": "array",
+      "items": [
+        {
+          "description": "Array of bulk strings containing scan results",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "description": "Boolean indicating whether more results are available",
+          "type": "boolean"
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

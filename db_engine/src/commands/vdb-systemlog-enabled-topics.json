@@ -1,0 +1,19 @@
+{
+  "ENABLED-TOPICS": {
+    "summary": "Get enabled system log topics.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": 2,
+    "container": "SYSTEMLOG",
+    "function": "LogEnabledTopicsCommand",
+    "command_flags": [
+      "FAST",
+      "READONLY"
+    ],
+    "reply_schema": {
+      "type": "string",
+      "description": "enabled topics"
+    }
+  }
+}

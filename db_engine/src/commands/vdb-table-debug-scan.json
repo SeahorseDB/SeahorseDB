@@ -1,0 +1,37 @@
+{
+  "DEBUGSCAN": {
+    "summary": "Scan Data from [Table Name] with [Projection list] and [Filter]. (for debug)",
+    "complexity": "O(n)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -5,
+    "container": "TABLE",
+    "function": "DebugScanCommand",
+    "command_flags": [
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Table Name]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[Projection List]",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "name": "[Filter]",
+        "type": "string",
+        "optional": false
+      }
+    ],
+    "reply_schema": {
+      "description": "bulk string of scan results.",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+#if 0
+/* log topic template
+ * when define LogTopicMacro, topic_name should be used by #topic_name
+ * MAXIMUM NUMBER OF TOPICS IS 64. CANNOT EXCEED IT. (8 bytes variable is used for managing log topic) */
+#define LogTopicMacro(topic_name, description) ...
+#undef LogTopicMacro
+/* template */
+LogTopicMacro(TopicName
+  ,/* description */ ""
+)
+#endif
+
+LogTopicMacro(Table
+  ,/* description */ "system logs for table"
+)
+
+LogTopicMacro(Index
+  ,/* description */ "system logs for index"
+)
+
+LogTopicMacro(Executor
+  ,/* description */ "system logs for executor"
+)
+
+LogTopicMacro(Command
+  ,/* description */ "system logs for command"
+)
+
+LogTopicMacro(Memory
+  ,/* description */ "system logs for memory"
+)
+
+LogTopicMacro(Disk
+  ,/* description */ "system logs for disk"
+)
+
+LogTopicMacro(Unknown
+  ,/* description */ "system logs for not defined topic"
+)

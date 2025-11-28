@@ -1,0 +1,20 @@
+{
+    "VDB-COUNT-AOF-REWRITES": {
+        "summary": "Count the number of AOF rewrites.",
+        "complexity": "O(1)",
+        "group": "vdb",
+        "since": "7.2.4",
+        "arity": 1,
+        "function": "CountAofRewritesCommand",
+        "command_flags": [
+            "NO_ASYNC_LOADING",
+            "ADMIN",
+            "NOSCRIPT"
+        ],
+        "command_tips": ["NONDETERMINISTIC_OUTPUT"],
+        "reply_schema": {
+            "description": "number of AOF rewrites",
+            "type": "int"
+        }
+    }
+}

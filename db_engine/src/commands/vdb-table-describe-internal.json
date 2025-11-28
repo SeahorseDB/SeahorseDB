@@ -1,0 +1,29 @@
+{
+  "DESCRIBE_INTERNAL": {
+    "summary": "Get table information of [Table Name], including internal columns.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -3,
+    "container": "TABLE",
+    "function": "DescribeTableCommand",
+    "command_flags": [
+      "READONLY"
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Table Name]",
+        "type": "string",
+        "optional": false
+      }
+    ],
+    "reply_schema": {
+      "description": "Serialized arrow schema binary including internal columns",
+      "type": "string"
+    }
+  }
+}
+

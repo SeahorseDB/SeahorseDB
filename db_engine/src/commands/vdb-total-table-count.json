@@ -1,0 +1,25 @@
+{
+  "TotalTableCount": {
+    "summary": "Counts of the total tables and unloaded tables in VDB",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -2,
+    "container": "VDB",
+    "function": "TotalTableCountCommand",
+    "command_flags": [
+      "FAST",
+      "READONLY"
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "reply_schema": {
+      "description": "Counts of the total tables and unloaded tables in VDB",
+        "type": "array",
+        "items" : {
+            "type": "integer"
+        }
+    }
+  }
+}

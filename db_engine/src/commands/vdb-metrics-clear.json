@@ -1,0 +1,19 @@
+{
+  "CLEAR": {
+    "summary": "Clear current metrics.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": 2,
+    "container": "METRICS",
+    "function": "MetricsClearCommand",
+    "command_flags": [
+      "FAST",
+      "READONLY"
+    ],
+    "reply_schema": {
+      "type": "string",
+      "description": "status of clearing metrics"
+    }
+  }
+}

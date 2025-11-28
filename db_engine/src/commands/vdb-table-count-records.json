@@ -1,0 +1,32 @@
+{
+  "CountRecords": {
+    "summary": "Counts the total records in Seahorse table.",
+    "complexity": "O(1)",
+    "group": "vdb",
+    "since": "7.2.4",
+    "arity": -3,
+    "container": "TABLE",
+    "function": "CountRecordsCommand",
+    "command_flags": [
+      "FAST",
+      "READONLY"
+    ],
+    "command_tips": [
+      "NONDETERMINISTIC_OUTPUT"
+    ],
+    "arguments": [
+      {
+        "name": "[Table Name]",
+        "type": "string",
+        "optional": false
+      }
+    ],
+    "reply_schema": {
+      "description": "Counts of the total records in [Table Name]",
+        "type": "array",
+        "items" : {
+            "type": "integer"
+        }
+    }
+  }
+}
